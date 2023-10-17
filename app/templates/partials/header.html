@@ -1,10 +1,8 @@
-<header>
-    {% include 'partials/navbar.html' %}
-    <div class="nav-dropdown-container" hide-desktop>
-        <ul class="nav-dropdown-list" id="nav-dropdown-list">
-            <li onclick="toogleDropdown();keAtas()">Beranda</li>
-            <li onclick="toogleDropdown();keSkill()">Kemampuan</li>
-            <li onclick="toogleDropdown();keKontak()">Kontak</li>
-        </ul>
-    </div>
-</header>
+{% include 'partials/navbar.html' %}
+<div class="nav-dropdown-container" hide-desktop>
+    <ul class="nav-dropdown-list" id="nav-dropdown-list">
+        <li onclick="toogleDropdown();keAtas()">Beranda</li>
+        <li onclick="toogleDropdown();keSkill()">Kemampuan</li>
+        <li onclick="toogleDropdown();keKontak()">Kontak</li>
+    </ul>
+</div>
