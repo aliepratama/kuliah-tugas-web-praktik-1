@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --warna-primary: #271B8F;
+    --warna-garis: #DDD;
+    --transisi: 0.2s cubic-bezier(0, 0, 0, 0.99);
+    --gutter-x: 0 6.66%;
+    --gutter-xy: 5vh 6.66%;
+    --gutter-desktop-x: 0 6.66%;
+    --gutter-desktop-xy: 10vh 6.66%;
+}
+*{
+    box-sizing: border-box;
+    font-family: poppins;
+    padding: 0 0;
+    margin: 0 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+header nav{
+    width: 100%;
+}
+header nav>ul {
+    width: 100%;
+    height: 7.5vh;
+    top: 0;
+    padding-left: 0;
+    padding: var(--gutter-xy);
+    margin-top: 0;
+    margin-bottom: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-color: white;
+}
+header #logo{
+    font-weight: 800;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+header #logo>span{
+    color: var(--warna-primary);
+}
+header div[class=button-round-menu]{
+    background-color: var(--warna-primary);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: var(--transisi);
+}
+header div[class=button-round-menu]:hover{
+    background-color: black;
+    cursor: pointer;
+}
+header img[class=icon-menu]{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+}
+header div[class=nav-dropdown-container]{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: var(--gutter-x);
+    position: fixed;
+    pointer-events: none;
+    top: 10vh
+}
+header ul[class=nav-dropdown-list]{
+    width: 100px;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 10%;
+    border: 1px solid var(--warna-garis);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    pointer-events: all;
+    overflow: hidden;
+    display: none;
+}
+header ul[class=nav-dropdown-list]>li{
+    width: 100%;
+    font-size: 0.75rem;
+    padding: 1vh 10%;
+    transition: var(--transisi);
+}
+header ul[class=nav-dropdown-list]>li:hover{
+    background-color: var(--warna-garis);
+    cursor: pointer;
+}
+header ul[class=nav-dropdown-list]>li:not(ul[class=nav-dropdown-list]>li:last-child){
+    border-bottom: 1px solid var(--warna-garis);
+}
+main #content{
+    padding: var(--gutter-x);
+}
+main article[class=article-first]{
+    width: auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+main article[class=article-first]>img[class=article-first-image]{
+    width: 50%;
+    aspect-ratio: 3/4;
+    object-fit: contain;
+}
+main article[class=article-first]>h4{
+    font-weight: 500;
+}
+main article[class=article-first]>h2>span{
+    color: var(--warna-primary);
+}
+main article[class=article-first]>p{
+    max-width: 80%;
+}
+main article[class=article-first]>p>strong{
+    font-weight: 600;
+}
+main aside{
+    width: 100%;
+    height: auto;
+}
+main aside img[class=article-first-image]{
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: contain;
+}
+#skill{
+    margin-top: 10vh;
+}
+#skill article[class=article-second]>h2{
+    text-align: center;
+    margin-bottom: 5vh;
+}
+#skill article[class=article-second] .skill-container{
+    display: flex;
+}
+#skill article[class=article-second] .skill-container>div{
+    display: flex;
+    flex-direction: column;
+    padding: var(--gutter-x);
+}
+#skill article[class=article-second] .skill-container>div:not(#skill article[class=article-second] .skill-container>div:nth-of-type(1)){
+    margin-top: 5vh;
+}
+#skill article[class=article-second] .skill-container div>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#skill article[class=article-second] .skill-container div>div>div{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+#skill article[class=article-second] .skill-container div>div>div>div[class*=progress-icon]{
+    width: 20px;
+    aspect-ratio: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#skill article[class=article-second] .skill-container div>div>div>.progress-icon-1{
+    background-image: url(../images/i_html.png);
+}
+#skill article[class=article-second] .skill-container div>div>div>.progress-icon-2{
+    background-image: url(../images/i_css.png);
+}
+#skill article[class=article-second] .skill-container div>div>div>.progress-icon-3{
+    background-image: url(../images/i_js.png);
+}
+#skill article[class=article-second] .skill-container div>div>div>.progress-icon-4{
+    background-image: url(../images/i_py.png);
+}
+#skill article[class=article-second] .skill-container div>div>div>.progress-icon-5{
+    background-image: url(../images/i_mysql.png);
+}
+#skill article[class=article-second] .skill-container div>div>div>label{
+    margin-left: 7.5%;
+}
+#skill article[class=article-second] .skill-container div>div>span{
+    font-weight: 800;
+}
+#skill article[class=article-second] .skill-container div>progress{
+    width: 100%;
+    margin-top: 2vh;
+}
+#skill article[class=article-second] .skill-container div>progress::-webkit-progress-bar{
+    background-color: var(--warna-garis) !important;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 0.5rem;
+}
+#skill article[class=article-second] .skill-container div>progress::-webkit-progress-value{
+    background-color: var(--warna-primary) !important;
+    border-radius: 0 20px 20px 0;
+    height: 0.5rem;
+}
+footer{
+    display: flex;
+}
+footer h2>span{
+    color: var(--warna-primary);
+}
+footer ul{
+    list-style-type: none;
+    padding: var(--gutter-x);
+    display: flex;
+}
+footer ul li{
+    aspect-ratio: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: saturate(0);
+    filter: brightness(0);
+    transition: var(--transisi);
+    cursor: pointer;
+}
+footer ul li:hover{
+    filter: saturate(1);
+    filter: brightness(1);
+}
+footer ul .footer-icon-ig{
+    background-image: url(../images/i_ig.png);
+}
+footer ul .footer-icon-gm{
+    background-image: url(../images/i_gm.png);
+}
+footer ul .footer-icon-gt{
+    background-image: url(../images/i_gt.png);
+}
+footer ul .footer-icon-drb{
+    background-image: url(../images/i_drb.png);
+}
+#credit p{
+    margin-top: 10vh;
+    text-align: center;
+    color: #292929;
+    font-weight: 300;
+}
+#credit p>span{
+    color: black;
+    font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+    *[hide-desktop]{
+        display: none!important;
+    }
+    header nav>ul {
+        justify-content: space-around;
+        padding: 7.5vh 20%;
+    }
+    header nav>ul>li[hide-mobile]{
+        transition: var(--transisi);
+        cursor: pointer;
+    }
+    header nav>ul>li[hide-mobile]:hover{
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    main{
+        margin-top: 10vh;
+    }
+    main #content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--gutter-desktop-xy);
+    }
+    main article[class=article-first]{
+        height: 40vh;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    main article[class=article-first]>h4, main article[class=article-first]>h2, main article[class=article-first]>p{
+        text-align: left;
+    }
+    main article[class=article-first]>h4{
+        font-size: 150%;
+    }
+    main article[class=article-first]>h2{
+        font-size: 300%;
+    }
+    main article[class=article-first]>p{
+        font-size: 110%;
+        max-width: 80%;
+    }
+    main aside{
+        width: 100%;
+        padding-left: 10%;
+    }
+    #skill article[class=article-second]>h2{
+        font-size: 250%;
+        margin-bottom: 10vh !important;
+    }
+    #skill article[class=article-second] .skill-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #skill article[class=article-second] .skill-container>div{
+        width: 50%;
+    }
+    #skill article[class=article-second] .skill-container>div:nth-of-type(2){
+        margin-top: 0 !important;
+    }
+    footer{
+        margin-top: 15vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: var(--gutter-desktop-x);
+    }
+    footer h2{
+        width: 70%;
+        text-align: left;
+        font-size: 250%;
+    }
+    footer ul{
+        width: 30%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    footer ul li{
+        width: 50%;
+        background-size: 50%;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+    *[hide-tablet]{
+        display: none!important;
+    }
+    main{
+        margin-top: 10vh;
+    }
+    main #content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main article[class=article-first]{
+        height: 25vh;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    main article[class=article-first]>h4, main article[class=article-first]>h2, main article[class=article-first]>p{
+        text-align: left;
+    }
+    main article[class=article-first]>h4{
+        font-size: 1.2rem;
+    }
+    main article[class=article-first]>h2{
+        font-size: 1.8rem;
+    }
+    main article[class=article-first]>p{
+        font-size: 0.7rem;
+    }
+    #skill article[class=article-second] .skill-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #skill article[class=article-second] .skill-container>div{
+        width: 50%;
+    }
+    #skill article[class=article-second] .skill-container>div:nth-of-type(2){
+        margin-top: 0 !important;
+    }
+    footer{
+        margin-top: 10vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: var(--gutter-desktop-x);
+    }
+    footer h2{
+        width: 50%;
+        text-align: left;
+        font-size: 200%;
+    }
+    footer ul{
+        width: 45%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    footer ul li{
+        width: 50%;
+        background-size: 50%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    *[hide-mobile]{
+        display: none!important;
+    }
+    main{
+        margin-top: 15vh;
+    }
+    main article[class=article-first]{
+        height: 75vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+    main article[class=article-first]>h4, main article[class=article-first]>h2, main article[class=article-first]>p{
+        text-align: center;
+    }
+    main article[class=article-first]>h4{
+        font-size: 1rem;
+    }
+    main article[class=article-first]>h2{
+        font-size: 2rem;
+    }
+    main article[class=article-first]>p{
+        font-size: 0.75rem;
+        max-width: 80%;
+    }
+    #skill article[class=article-second] .skill-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #skill article[class=article-second] .skill-container>div{
+        width: 100%;
+    }
+    footer{
+        margin-top: 10vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer h2{
+        text-align: center;
+        font-size: 2rem;
+    }
+    footer ul{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    footer ul li{
+        width: 10%;
+        margin-top: 7.5vh;
+    }
+    footer ul li:hover{
+        width: 12.5%;
+    }
+}
