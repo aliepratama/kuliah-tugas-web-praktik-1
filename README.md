@@ -1,6 +1,6 @@
 <img src="https://i.ibb.co/VDdmzd5/ODcy-MEY5-Mk-Mt-REQy-Mi00-RDU3-LUI3-MEIt-NTZDNz-JFNUVGREMw.png" width="150" height="150"/>
 
-# Tugas Membuat Web Tampilan Sederhana berbasis Flask
+# Laporan Web Tampilan Sederhana berbasis Flask
 
 Nama: Muhammad Ali Pratama Putra
 
@@ -85,12 +85,12 @@ Berikut adalah struktur folder dari projek ini.
 Berikut adalah tampilan web yang saya buat.
 
 1. Tampilan desktop
-
-   <img src="https://i.ibb.co/zHXMdjn/Desktop.png"/>
-
-2. Tampilan tablet
-
-    <img src="https://i.ibb.co/1Txhb36/Tablet.png"/>
    
+   <img src="https://i.ibb.co/zHXMdjn/Desktop.png"/>
+   
+2. Tampilan tablet
+   
+    <img src="https://i.ibb.co/1Txhb36/Tablet.png" width="600"/>
+    
 3.Tampilan mobile
-    <img src="https://i.ibb.co/jDTT6HM/Mobile.png"/>
+    <img src="https://i.ibb.co/jDTT6HM/Mobile.png" width="300"/>
